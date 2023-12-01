@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ReactPlayer from "react-player";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const [noButtonPos, setNoButtonPos] = useState({ x: 20, y: 60 });
+
+  function handleNoHover() {
+    const maxX = window.innerWidth;
+    const maxY = window.innerHeight;
+
+    setNoButtonPos({
+      x: Math.random() * maxX,
+      y: Math.max(0, Math.min(Math.random() * maxY, maxY - 50)),
+    });
+  }
+
+  const handleVideoEnd = () => {
+    setIsVideoPlaying(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container" onClick={() => setIsVideoPlaying(true)}>
+      {isVideoPlaying ? (
+        <ReactPlayer
+          url="/video/video.mp4"
+          playing
+          onEnded={handleVideoEnd}
+          width="100vw"
+          height="100%"
+        />
+      ) : (
+        <div className="background-image">
+          <div class="card">
+            <div class="card-content">
+              <p class="card-title">How About a Lunch ? </p>
+              <button>Yes</button>
+            </div>
+          </div>
+
+          <button
+            className="no-button"
+            style={{
+              position: "absolute",
+              left: noButtonPos.x,
+              top: noButtonPos.y,
+            }}
+            onMouseEnter={handleNoHover}
+          >
+            No
+          </button>
+        </div>
+      )}
+      {/* Your other components/content goes here */}
     </div>
   );
-}
+};
 
 export default App;
