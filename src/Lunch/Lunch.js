@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
-import "./App.css";
-
-const App = () => {
+import "./Lunch.css";
+const Lunch = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [noButtonPos, setNoButtonPos] = useState({ x: 20, y: 60 });
 
@@ -57,4 +56,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Lunch;
