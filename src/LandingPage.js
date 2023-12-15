@@ -23,8 +23,9 @@ export const LandingPage = ({ onVisitLunch }) => {
 
       <p class="message">
         Okay, this can say that I still didn't lose hope and password for that
-        PDF is your nickname and the date I first texted you. example:
-        (sweety1210 where sweety as nickname and 12th october is the date.)
+        PDF is your nickname and the date I first texted you.Example:sweety1210
+        where sweety as nickname and 12oct is the date.Try force refreshing if
+        the video does not starts after clicking below.
       </p>
 
       <div class="actions">
