@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "./Lunch.css";
-const Lunch = () => {
+const Lunch = ({ onVisitLunch }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [noButtonPos, setNoButtonPos] = useState({ x: 20, y: 60 });
 
@@ -34,7 +34,7 @@ const Lunch = () => {
           <div class="card">
             <div class="card-content">
               <p class="card-title">How About a Lunch ? </p>
-              <button>Yes</button>
+              <button onClick={onVisitLunch}>Yes</button>
             </div>
           </div>
 
@@ -46,6 +46,7 @@ const Lunch = () => {
               top: noButtonPos.y,
             }}
             onMouseEnter={handleNoHover}
+            onClick={onVisitLunch}
           >
             No
           </button>
