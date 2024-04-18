@@ -21,16 +21,11 @@ export const LandingPage = ({ onVisitLunch }) => {
         <p class="alert">New message!</p>
       </div>
 
-      <p class="message">
-        Okay, this can say that I still didn't lose hope and password for that
-        PDF is your nickname and the date I first texted you.Example:sweety1210
-        where sweety as nickname and 12oct is the date.Try force refreshing if
-        the video does not starts after clicking below.
-      </p>
+      <p class="message">Built for asking date to your loved ones !</p>
 
       <div class="actions">
         <a class="read" href="#" onClick={onVisitLunch}>
-          Click to visit Lunch Proposal
+          Click to visit Date Proposal
         </a>
       </div>
     </div>

@@ -33,7 +33,7 @@ const Lunch = ({ onVisitLunch }) => {
         <div className="background-image">
           <div class="card">
             <div class="card-content">
-              <p class="card-title">How About a Lunch ? </p>
+              <p class="card-title">How About a Date ? </p>
               <button onClick={onVisitLunch}>Yes</button>
             </div>
           </div>
